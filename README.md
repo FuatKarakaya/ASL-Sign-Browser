@@ -45,6 +45,12 @@ python download_videos.py
 
 These extra dependencies are only for downloading/verification and stay in `.tools/`. Viewing the site still needs no packages. The downloader uses the official embed context, selects video up to 720p with available audio, and merges into MP4. It checks the Vimeo ID, fully decodes every file with FFmpeg, and records its source, size and SHA-256 in `local_media.json`. Existing MP4s are reused and rechecked. Preparation preserves verified local references on reruns.
 
+## Exclusions and repeated movement
+
+Use **Exclude handshapes** to check any combination of handshapes to remove from the results. The options are ordered by usage across the original 200 signs. **Hide** removes an individual card; **Restore hidden signs** restores all hidden cards. These choices are saved in this browser and origin, independently of the shortlist. **Reset** clears search, filters, and handshape exclusions; hidden signs stay hidden until restored. Hiding a shortlisted sign does not delete it from the shortlist or its export.
+
+The **Repeated movement** filter offers repeated, non-repeated, and unclear coding. A sign is repeated when any existing morpheme has `RepeatedMovement=1`; it is non-repeated only when every existing morpheme has `0`. Missing/NA coding without an explicit repeated unit is unclear. Repeated signs display **Repeated movement** on the card, including during playback. This is a yes/no classification, not a repeat count.
+
 ## Derived motion labels
 
 The data key does not provide a definitive static/dynamic column. For **all existing morphemes**, the rule uses path movement, wrist twist (`UlnarRotation`), flexion/spread changes, repetition, and location/handshape transitions:

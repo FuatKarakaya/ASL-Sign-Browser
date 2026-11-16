@@ -55,12 +55,30 @@ assert.equal(run("cardHTML({...signs[0],motion:'Static candidate'}).includes('ca
 assert.equal(run("cardHTML(signs[0]).includes('card dynamic')"),true);
 assert.equal(run("cardHTML(signs[0]).includes('<h2><a href=')"),true);
 assert.equal(run("signs.every(s => s.localVideo?.startsWith('media/videos/'))"),true);
+assert.equal(run("repetitionStatus({morphemes:[{'RepeatedMovement.2.0':'0'},{'RepeatedMovementM2.2.0':'1'}]})"),'repeated');
+assert.equal(run("repetitionStatus({morphemes:[{'RepeatedMovement.2.0':'0'},{'RepeatedMovementM2.2.0':'NA'}]})"),'unclear');
+assert.equal(run("repetitionStatus({morphemes:[]})"),'unclear');
+assert.equal(run("repetitionStatus({morphemes:[{'RepeatedMovement.2.0':'0'}]})"),'non-repeated');
+assert.equal(run("['repeated','non-repeated','unclear'].reduce((n,repetition)=>n+matchingSigns(signs,{repetition},new Set()).length,0)"),200);
+assert.equal(run("matchingSigns(signs,{repetition:'repeated'},new Set()).every(s=>cardHTML(s).includes('Repeated movement'))"),true);
+assert.equal(run("matchingSigns(signs,{repetition:'non-repeated'},new Set()).every(s=>!cardHTML(s).includes('Repeated movement'))"),true);
+run("hiddenSigns.add(signs[0].id); excludedHandshapes.add(signs[1].handshape.id); saveExclusions(); hiddenSigns.clear(); excludedHandshapes.clear(); readExclusions();");
+assert.equal(run("hiddenSigns.has(signs[0].id) && excludedHandshapes.has(signs[1].handshape.id)"),true);
+assert.equal(run("matchingSigns(signs,{repetition:'repeated'},new Set()).every(s=>s.id!==signs[0].id && s.handshape.id!==signs[1].handshape.id && repetitionStatus(s)==='repeated')"),true);
+run("excludedHandshapes.add(signs[2].handshape.id)");
+assert.equal(run("matchingSigns(signs,{},new Set()).every(s=>!excludedHandshapes.has(s.handshape.id))"),true);
+run("resetFilters()");
+assert.equal(run('excludedHandshapes.size'),0);
+assert.equal(run('hiddenSigns.size'),1,'Reset must not silently restore hidden signs');
+assert.equal(getNode('repetition').value,'');
+run('hiddenSigns.clear(); saveExclusions()');
+assert.equal(run('matchingSigns(signs,{},new Set()).length'),200,'Restore brings signs back without changing rank');
 assert.equal(run("escapeHTML('<script>\"&')"),'&lt;script&gt;&quot;&amp;');
 savedStorage.set('asl-sign-browser.shortlist.v1','invalid JSON');
 run('readShortlist()');
 assert.equal(getNode('storage-notice').hidden,false,'Invalid storage gives a useful visible warning');
 const report = {checkedAtUTC:new Date().toISOString(), status:'PASS',
-  checks:['search and alternate translations','exact handshape and motion filters','empty state selection','reset filter values','original ranks','shortlist save/restore logic','CSV escaping and exact variants','200 initial cards','no initial iframe','HTML escaping','storage failure warning'],
+  checks:['multi-handshape exclusions','hidden sign persistence and restore','combined repetition/exclusion filters','repetition across morphemes and missing coding','repeated card label','search and alternate translations','exact handshape and motion filters','empty state selection','reset filter values','original ranks','shortlist save/restore logic','CSV escaping and exact variants','200 initial cards','no initial iframe','HTML escaping','storage failure warning'],
   limitation:'VM logic checks with minimal DOM/storage stubs. No real browser rendering, media playback, localStorage or download UI was tested.'};
 fs.writeFileSync(path.join(dir,'ui_logic_report.json'),JSON.stringify(report,null,2)+'\n');
 console.log(JSON.stringify(report,null,2));

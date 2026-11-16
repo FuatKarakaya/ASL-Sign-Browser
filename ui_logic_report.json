@@ -1,7 +1,12 @@
 {
-  "checkedAtUTC": "2026-11-16T11:56:42.717Z",
+  "checkedAtUTC": "2026-11-16T13:13:57.330Z",
   "status": "PASS",
   "checks": [
+    "multi-handshape exclusions",
+    "hidden sign persistence and restore",
+    "combined repetition/exclusion filters",
+    "repetition across morphemes and missing coding",
+    "repeated card label",
     "search and alternate translations",
     "exact handshape and motion filters",
     "empty state selection",

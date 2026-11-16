@@ -7,6 +7,40 @@ const escapeHTML = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'
 const normalize = value => String(value ?? '').toLocaleLowerCase('en').replace(/_/g, ' ').trim();
 let shortlist = new Set();
 let activePlayer = null;
+const preferencesKey = 'asl-sign-browser.exclusions.v1';
+let hiddenSigns = new Set();
+let excludedHandshapes = new Set();
+
+function readExclusions() {
+  try {
+    const preferences = JSON.parse(localStorage.getItem(preferencesKey) || '{}');
+    const validShapes = new Set(signs.map(s => s.handshape.id));
+    if ((preferences.hidden && !Array.isArray(preferences.hidden)) ||
+        (preferences.handshapes && !Array.isArray(preferences.handshapes))) throw new Error('Invalid exclusions');
+    hiddenSigns = new Set((preferences.hidden || []).filter(id => byId.has(id)));
+    excludedHandshapes = new Set((preferences.handshapes || []).filter(id => validShapes.has(id)));
+  } catch (_) {
+    $('storage-notice').hidden = false;
+    $('storage-notice').textContent = 'Could not restore hidden signs and handshapes. Changes will work for this visit.';
+  }
+}
+
+function saveExclusions() {
+  try {
+    localStorage.setItem(preferencesKey, JSON.stringify({hidden:[...hiddenSigns], handshapes:[...excludedHandshapes]}));
+  } catch (_) {
+    $('storage-notice').hidden = false;
+    $('storage-notice').textContent = 'Could not save hidden signs and handshapes. Changes will work for this visit.';
+  }
+}
+
+function repetitionStatus(sign) {
+  const units = sign.morphemes || [];
+  const values = units.map((unit, i) => unit[`RepeatedMovement${i ? 'M' + (i + 1) : ''}.2.0`]);
+  if (values.includes('1')) return 'repeated';
+  if (values.length && values.every(value => value === '0')) return 'non-repeated';
+  return 'unclear';
+}
 
 function readShortlist() {
   try {
@@ -23,6 +57,8 @@ function matchingSigns(items, filters, saved) {
   const query = normalize(filters.query);
   return items.filter(s => (!query || normalize([s.entryId, s.name, ...s.translations].join(' ')).includes(query)) &&
     (!filters.handshape || s.handshape.id === filters.handshape) &&
+    !hiddenSigns.has(s.id) && !excludedHandshapes.has(s.handshape.id) &&
+    (!filters.repetition || repetitionStatus(s) === filters.repetition) &&
     (!filters.motion || s.motion === filters.motion) && (!filters.shortlistOnly || saved.has(s.id)));
 }
 
@@ -80,6 +116,7 @@ function stopPlayer() {
   card.querySelector('.video-wrap').hidden = true;
   card.querySelector('.back').hidden = true;
   card.querySelector('.save').hidden = false;
+  card.querySelector('.hide-sign').hidden = false;
   card.querySelector('.media-status').hidden = true;
   activePlayer = null;
 }
@@ -98,6 +135,7 @@ function playCard(card, sign) {
   card.querySelector('.video-wrap').hidden = false;
   card.querySelector('.back').hidden = false;
   card.querySelector('.save').hidden = true;
+  card.querySelector('.hide-sign').hidden = true;
   state.video.currentTime = 0;
   state.video.play().catch(() => {
     if (activePlayer !== state) return;
@@ -111,9 +149,9 @@ function cardHTML(s) {
   const theme = s.motion === 'Static candidate' ? 'static' : s.motion === 'Unclear' ? 'unclear' : 'dynamic';
   return `<article class="card ${theme}" data-id="${e(s.id)}">
     <div class="card-top"><span class="rank">${s.rank}</span><h2><a href="${e(s.source)}" target="_blank" rel="noopener">${e(s.name)}</a></h2>
-    <button class="save" type="button" data-id="${e(s.id)}" aria-pressed="false">&#9734;</button><button class="back" type="button" aria-label="Close video for ${e(s.name)}" hidden>&times;</button></div>
+    <button class="hide-sign" type="button" aria-label="Hide ${e(s.name)}">Hide</button><button class="save" type="button" data-id="${e(s.id)}" aria-pressed="false">&#9734;</button><button class="back" type="button" aria-label="Close video for ${e(s.name)}" hidden>&times;</button></div>
     <div class="card-body"><div class="card-summary"><div class="overview">${s.handshape.image ? `<img class="handshape" src="${e(s.handshape.image)}" alt="${e(s.handshape.name)} handshape" loading="lazy" width="90" height="90">` : '<span class="image-error">Image unavailable</span>'}</div><button class="play" type="button" aria-label="Play ${e(s.name)}">&#9654; Play</button></div>
-    <div class="video-wrap" hidden></div><p class="media-status error" role="status" hidden></p></div></article>`;
+    ${repetitionStatus(s) === 'repeated' ? '<span class="repeat-label">Repeated movement</span>' : ''}<div class="video-wrap" hidden></div><p class="media-status error" role="status" hidden></p></div></article>`;
 }
 
 function render() {
@@ -123,10 +161,14 @@ function render() {
     video.pause(); video.removeAttribute('src'); video.load();
   }
   videoPlayers.clear();
-  const visible = matchingSigns(signs, {query:$('search').value, handshape:$('handshape').value, motion:$('motion').value, shortlistOnly:$('shortlist-only').checked}, shortlist);
+  const visible = matchingSigns(signs, {query:$('search').value, handshape:$('handshape').value, motion:$('motion').value, repetition:$('repetition').value, shortlistOnly:$('shortlist-only').checked}, shortlist);
   $('cards').innerHTML = visible.map(cardHTML).join('');
   $('result-count').textContent = visible.length === signs.length ? `${signs.length} signs` : `${visible.length} / ${signs.length} signs`;
   $('empty').hidden = visible.length > 0;
+  $('restore-hidden').hidden = hiddenSigns.size === 0;
+  $('restore-hidden').textContent = `Restore hidden signs (${hiddenSigns.size})`;
+  $('exclusion-summary').textContent = excludedHandshapes.size ? `Exclude handshapes (${excludedHandshapes.size})` : 'Exclude handshapes';
+  document.querySelectorAll('.exclude-shape').forEach(input => { input.checked = excludedHandshapes.has(input.value); });
   // Preload only cards intersecting the viewport; never request the entire collection at startup.
   visibilityObserver = new IntersectionObserver(entries => {
     for (const entry of entries) {
@@ -140,6 +182,9 @@ function render() {
   document.querySelectorAll('.card').forEach(card => {
     const sign = byId.get(card.dataset.id);
     visibilityObserver.observe(card);
+    card.querySelector('.hide-sign').addEventListener('click', () => {
+      hiddenSigns.add(sign.id); saveExclusions(); render();
+    });
     card.querySelector('.save').addEventListener('click', () => {
       shortlist.has(sign.id) ? shortlist.delete(sign.id) : shortlist.add(sign.id);
       try { localStorage.setItem(storageKey, JSON.stringify([...shortlist])); }
@@ -157,7 +202,8 @@ function render() {
 }
 
 function resetFilters() {
-  $('search').value = ''; $('handshape').value = ''; $('motion').value = ''; $('shortlist-only').checked = false; render();
+  $('search').value = ''; $('handshape').value = ''; $('motion').value = ''; $('repetition').value = ''; $('shortlist-only').checked = false;
+  excludedHandshapes.clear(); saveExclusions(); render();
 }
 
 const handshapeCounts = new Map();
@@ -166,9 +212,20 @@ const handshapes = [...new Map(signs.map(s => [s.handshape.id, s.handshape])).va
   handshapeCounts.get(b.id) - handshapeCounts.get(a.id) || a.id.localeCompare(b.id, 'en', {numeric:true}));
 for (const h of handshapes) {
   const option = document.createElement('option'); option.value = h.id; option.textContent = `${h.name} (${handshapeCounts.get(h.id)})`; $('handshape').append(option);
+  const label = document.createElement('label');
+  const checkbox = document.createElement('input');
+  checkbox.type = 'checkbox'; checkbox.className = 'exclude-shape'; checkbox.value = h.id;
+  checkbox.addEventListener('change', () => {
+    checkbox.checked ? excludedHandshapes.add(h.id) : excludedHandshapes.delete(h.id);
+    saveExclusions(); render();
+  });
+  label.append(checkbox, document.createTextNode(`${h.name} (${handshapeCounts.get(h.id)})`));
+  $('handshape-exclusions').append(label);
 }
+$('restore-hidden').addEventListener('click', () => { hiddenSigns.clear(); saveExclusions(); render(); });
+$('clear-exclusions').addEventListener('click', () => { excludedHandshapes.clear(); saveExclusions(); render(); });
 $('search').addEventListener('input', render);
-for (const id of ['handshape','motion','shortlist-only']) $(id).addEventListener('change', render);
+for (const id of ['handshape','motion','repetition','shortlist-only']) $(id).addEventListener('change', render);
 for (const id of ['reset','empty-reset']) $(id).addEventListener('click', resetFilters);
 $('export').addEventListener('click', () => {
   const selected = signs.filter(s => shortlist.has(s.id));
@@ -179,4 +236,5 @@ $('export').addEventListener('click', () => {
 });
 window.addEventListener('pagehide', stopPlayer);
 readShortlist();
+readExclusions();
 render();

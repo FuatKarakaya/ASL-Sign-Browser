@@ -4,10 +4,12 @@
 <strong id="result-count" role="status" aria-live="polite">200 signs</strong>
 <input id="search" type="search" aria-label="Search signs or translations" placeholder="Search signs..." autocomplete="off">
 <select id="handshape" aria-label="Handshape"><option value="">All handshapes</option></select>
+<details class="exclude-menu"><summary id="exclusion-summary">Exclude handshapes</summary><div class="exclude-panel"><button id="clear-exclusions" type="button">Clear exclusions</button><div id="handshape-exclusions"></div></div></details>
 <select id="motion" aria-label="Motion status"><option value="">All motion</option><option>Dynamic</option><option>Static candidate</option><option>Unclear</option></select>
+<select id="repetition" aria-label="Repeated movement"><option value="">All repetition</option><option value="repeated">Repeated movement</option><option value="non-repeated">Non-repeated movement</option><option value="unclear">Repetition unclear</option></select>
 <button id="reset" type="button">Reset</button>
 <label class="shortlist-filter"><input id="shortlist-only" type="checkbox"> Shortlist <span id="shortlist-count">0</span></label>
-<button id="export" type="button" disabled>Export shortlist</button></div>
+<button id="export" type="button" disabled>Export shortlist</button><button id="restore-hidden" type="button" hidden>Restore hidden signs</button></div>
 <p id="storage-notice" role="status" hidden></p><section id="cards" class="cards" aria-label="Signs in frequency order"></section>
 <div id="empty" hidden>No matching signs. <button id="empty-reset" type="button">Reset filters</button></div>
 <noscript>Enable JavaScript to browse the signs.</noscript>
