@@ -160,9 +160,12 @@ function resetFilters() {
   $('search').value = ''; $('handshape').value = ''; $('motion').value = ''; $('shortlist-only').checked = false; render();
 }
 
-const handshapes = [...new Map(signs.map(s => [s.handshape.id, s.handshape])).values()].sort((a,b) => a.id.localeCompare(b.id, 'en', {numeric:true}));
+const handshapeCounts = new Map();
+for (const sign of signs) handshapeCounts.set(sign.handshape.id, (handshapeCounts.get(sign.handshape.id) || 0) + 1);
+const handshapes = [...new Map(signs.map(s => [s.handshape.id, s.handshape])).values()].sort((a,b) =>
+  handshapeCounts.get(b.id) - handshapeCounts.get(a.id) || a.id.localeCompare(b.id, 'en', {numeric:true}));
 for (const h of handshapes) {
-  const option = document.createElement('option'); option.value = h.id; option.textContent = `${h.name} [${h.id}]`; $('handshape').append(option);
+  const option = document.createElement('option'); option.value = h.id; option.textContent = `${h.name} (${handshapeCounts.get(h.id)})`; $('handshape').append(option);
 }
 $('search').addEventListener('input', render);
 for (const id of ['handshape','motion','shortlist-only']) $(id).addEventListener('change', render);
