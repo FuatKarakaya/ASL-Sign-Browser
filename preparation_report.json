@@ -1,0 +1,150 @@
+{
+  "inputCount": 2723,
+  "encoding": "latin-1",
+  "eligibleCount": 954,
+  "ambiguousExcluded": [
+    {
+      "EntryID": "frenchfries",
+      "reason": "SignTypeM2.2.0='NA'"
+    },
+    {
+      "EntryID": "alphabet",
+      "reason": "SignTypeM2.2.0='NA'; SignTypeM3.2.0='NA'"
+    },
+    {
+      "EntryID": "thursday",
+      "reason": "SignTypeM2.2.0='NA'"
+    },
+    {
+      "EntryID": "staff",
+      "reason": "SignTypeM2.2.0='NA'"
+    },
+    {
+      "EntryID": "TV",
+      "reason": "SignTypeM2.2.0='NA'"
+    },
+    {
+      "EntryID": "high_school",
+      "reason": "SignTypeM2.2.0='NA'"
+    },
+    {
+      "EntryID": "no",
+      "reason": "SignTypeM2.2.0='NA'"
+    },
+    {
+      "EntryID": "february",
+      "reason": "SignTypeM2.2.0='NA'; SignTypeM3.2.0='NA'"
+    },
+    {
+      "EntryID": "bank",
+      "reason": "SignTypeM2.2.0='NA'; SignTypeM3.2.0='NA'; SignTypeM4.2.0='NA'"
+    },
+    {
+      "EntryID": "bus",
+      "reason": "SignTypeM2.2.0='NA'; SignTypeM3.2.0='NA'"
+    },
+    {
+      "EntryID": "off",
+      "reason": "SignTypeM2.2.0='NA'; SignTypeM3.2.0='NA'"
+    },
+    {
+      "EntryID": "pizza_2",
+      "reason": "SignTypeM2.2.0='NA'; SignTypeM3.2.0='NA'; SignTypeM4.2.0='NA'"
+    },
+    {
+      "EntryID": "zoo",
+      "reason": "SignTypeM2.2.0='NA'; SignTypeM3.2.0='NA'"
+    },
+    {
+      "EntryID": "pjs",
+      "reason": "SignTypeM2.2.0='NA'"
+    },
+    {
+      "EntryID": "half",
+      "reason": "SignTypeM2.2.0='NA'"
+    },
+    {
+      "EntryID": "ok",
+      "reason": "SignTypeM2.2.0='NA'"
+    },
+    {
+      "EntryID": "tty",
+      "reason": "SignTypeM2.2.0='NA'; SignTypeM3.2.0='NA'"
+    },
+    {
+      "EntryID": "so",
+      "reason": "SignTypeM2.2.0='NA'"
+    },
+    {
+      "EntryID": "pass_out",
+      "reason": "SignTypeM2.2.0='NA'"
+    },
+    {
+      "EntryID": "hen",
+      "reason": "SignTypeM2.2.0='NA'; SignTypeM3.2.0='NA'"
+    },
+    {
+      "EntryID": "W.H.A.T",
+      "reason": "SignTypeM2.2.0='NA'; SignTypeM3.2.0='NA'; SignTypeM4.2.0='NA'"
+    },
+    {
+      "EntryID": "haha",
+      "reason": "SignTypeM2.2.0='NA'; SignTypeM3.2.0='NA'; SignTypeM4.2.0='NA'; SignTypeM5.2.0='NA'; SignTypeM6.2.0='NA'"
+    },
+    {
+      "EntryID": "ice",
+      "reason": "SignTypeM2.2.0='NA'; SignTypeM3.2.0='NA'"
+    },
+    {
+      "EntryID": "cancer_1",
+      "reason": "SignTypeM2.2.0='NA'; SignTypeM3.2.0='NA'; SignTypeM4.2.0='NA'; SignTypeM5.2.0='NA'; SignTypeM6.2.0='NA'"
+    },
+    {
+      "EntryID": "april",
+      "reason": "SignTypeM2.2.0='NA'; SignTypeM3.2.0='NA'; SignTypeM4.2.0='NA'; SignTypeM5.2.0='NA'"
+    },
+    {
+      "EntryID": "dog_4",
+      "reason": "SignTypeM3.2.0='NA'"
+    },
+    {
+      "EntryID": "pissed_off",
+      "reason": "SignTypeM2.2.0='NA'"
+    },
+    {
+      "EntryID": "senior_citizen",
+      "reason": "SignTypeM2.2.0='NA'"
+    },
+    {
+      "EntryID": "hard_of_hearing",
+      "reason": "SignTypeM2.2.0='NA'"
+    },
+    {
+      "EntryID": "bullshit",
+      "reason": "SignTypeM2.2.0='NA'"
+    }
+  ],
+  "missingFrequency": [],
+  "websiteSignCount": 200,
+  "missingMediaJoins": [],
+  "missingVideoMappings": [],
+  "missingImageMappings": [],
+  "motionCounts": {
+    "Dynamic": 197,
+    "Unclear": 3
+  },
+  "repositoryCommit": "2d74fb6cb4a4209702ef5c18b211e937144ad1fb",
+  "duplicateSourceEntryIDs": {
+    "type": 2,
+    "take_off": 2,
+    "bite": 2,
+    "drag": 2
+  },
+  "imageTableAliases": [
+    {
+      "EntryID": "think_chin",
+      "imageTableEntryID": "think_chin.m4v",
+      "Code": "K_03_120"
+    }
+  ]
+}

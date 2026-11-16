@@ -1,0 +1,1241 @@
+{
+  "checkedAtUTC": "2026-11-15T20:50:38.092672+00:00",
+  "scope": "GET requests sampling at most 512 bytes of each mapped embed HTML / image, with localhost Referer. No video files downloaded. HTTP status does not prove browser playback.",
+  "signCount": 100,
+  "uniqueVideoURLs": 100,
+  "uniqueImageURLs": 29,
+  "checks": [
+    {
+      "url": "https://aslcdi.website/images/handshape_images/1.png",
+      "kind": "image",
+      "entries": [
+        "you|D_02_065",
+        "deaf_1|F_03_038",
+        "me|B_01_068",
+        "this/it|F_01_035",
+        "he|F_02_044",
+        "where|B_02_035",
+        "one|F_03_012",
+        "always|J_03_076",
+        "we|G_03_019",
+        "something|G_01_009",
+        "long|G_01_059",
+        "there|D_02_060",
+        "tell|C_02_013",
+        "black|B_02_006",
+        "what_for|C_02_054",
+        "hearing|C_02_023",
+        "dont_mind|B_03_033",
+        "bored|B_01_017",
+        "really|B_02_021",
+        "first|C_01_033"
+      ],
+      "status": 200,
+      "contentType": "image/png"
+    },
+    {
+      "url": "https://aslcdi.website/images/handshape_images/3.png",
+      "kind": "image",
+      "entries": [
+        "three|B_01_044"
+      ],
+      "status": 200,
+      "contentType": "image/png"
+    },
+    {
+      "url": "https://aslcdi.website/images/handshape_images/5.png",
+      "kind": "image",
+      "entries": [
+        "mother|B_02_008",
+        "sleep|B_03_037",
+        "parents|B_03_044",
+        "father|B_01_077",
+        "your|F_01_052",
+        "fine_2|D_02_067",
+        "fine_1|C_01_043",
+        "bye|E_01_058",
+        "cool_1|F_01_014",
+        "woman|C_02_028"
+      ],
+      "status": 200,
+      "contentType": "image/png"
+    },
+    {
+      "url": "https://aslcdi.website/images/handshape_images/8.png",
+      "kind": "image",
+      "entries": [
+        "light_2|K_01_102",
+        "like|F_03_063",
+        "dont_like|F_01_033",
+        "necklace_3|K_02_080"
+      ],
+      "status": 200,
+      "contentType": "image/png"
+    },
+    {
+      "url": "https://aslcdi.website/images/handshape_images/a.png",
+      "kind": "image",
+      "entries": [
+        "tomorrow|F_02_040",
+        "woman_2|K_01_101",
+        "everyday|E_01_084",
+        "yesterday|D_01_024"
+      ],
+      "status": 200,
+      "contentType": "image/png"
+    },
+    {
+      "url": "https://aslcdi.website/images/handshape_images/baby_o.png",
+      "kind": "image",
+      "entries": [
+        "understand|C_01_006",
+        "toilet|A_02_038",
+        "toothbrush-ca|K_03_058"
+      ],
+      "status": 200,
+      "contentType": "image/png"
+    },
+    {
+      "url": "https://aslcdi.website/images/handshape_images/bent_1.png",
+      "kind": "image",
+      "entries": [
+        "must|F_02_004",
+        "time|B_02_080",
+        "should|G_02_079"
+      ],
+      "status": 200,
+      "contentType": "image/png"
+    },
+    {
+      "url": "https://aslcdi.website/images/handshape_images/c.png",
+      "kind": "image",
+      "entries": [
+        "drink|B_02_012",
+        "pour_2|K_01_094",
+        "policeman_2|K_03_104"
+      ],
+      "status": 200,
+      "contentType": "image/png"
+    },
+    {
+      "url": "https://aslcdi.website/images/handshape_images/closed_b.png",
+      "kind": "image",
+      "entries": [
+        "hello|D_02_055",
+        "afternoon|J_01_040"
+      ],
+      "status": 200,
+      "contentType": "image/png"
+    },
+    {
+      "url": "https://aslcdi.website/images/handshape_images/curved_v.png",
+      "kind": "image",
+      "entries": [
+        "listen|K_01_117"
+      ],
+      "status": 200,
+      "contentType": "image/png"
+    },
+    {
+      "url": "https://aslcdi.website/images/handshape_images/d.png",
+      "kind": "image",
+      "entries": [
+        "dog|A_01_056"
+      ],
+      "status": 200,
+      "contentType": "image/png"
+    },
+    {
+      "url": "https://aslcdi.website/images/handshape_images/f.png",
+      "kind": "image",
+      "entries": [
+        "friday|B_02_020",
+        "soon_1|G_01_004",
+        "curious|F_03_051"
+      ],
+      "status": 200,
+      "contentType": "image/png"
+    },
+    {
+      "url": "https://aslcdi.website/images/handshape_images/flat_1.png",
+      "kind": "image",
+      "entries": [
+        "point_index|K_02_083",
+        "think|C_03_053"
+      ],
+      "status": 200,
+      "contentType": "image/png"
+    },
+    {
+      "url": "https://aslcdi.website/images/handshape_images/flat_b.png",
+      "kind": "image",
+      "entries": [
+        "fed_up|E_01_047",
+        "our|G_02_067"
+      ],
+      "status": 200,
+      "contentType": "image/png"
+    },
+    {
+      "url": "https://aslcdi.website/images/handshape_images/flat_o.png",
+      "kind": "image",
+      "entries": [
+        "boy|B_02_090",
+        "kiss|D_02_014",
+        "tired_of|G_01_043"
+      ],
+      "status": 200,
+      "contentType": "image/png"
+    },
+    {
+      "url": "https://aslcdi.website/images/handshape_images/flatspread_5.png",
+      "kind": "image",
+      "entries": [
+        "hot|F_02_093"
+      ],
+      "status": 200,
+      "contentType": "image/png"
+    },
+    {
+      "url": "https://aslcdi.website/images/handshape_images/i.png",
+      "kind": "image",
+      "entries": [
+        "if|G_03_017"
+      ],
+      "status": 200,
+      "contentType": "image/png"
+    },
+    {
+      "url": "https://aslcdi.website/images/handshape_images/ily.png",
+      "kind": "image",
+      "entries": [
+        "I_love_you|F_01_102"
+      ],
+      "status": 200,
+      "contentType": "image/png"
+    },
+    {
+      "url": "https://aslcdi.website/images/handshape_images/l.png",
+      "kind": "image",
+      "entries": [
+        "who|C_01_041"
+      ],
+      "status": 200,
+      "contentType": "image/png"
+    },
+    {
+      "url": "https://aslcdi.website/images/handshape_images/o.png",
+      "kind": "image",
+      "entries": [
+        "eat_1|B_02_002",
+        "eat_2|B_03_082",
+        "home|B_03_063",
+        "breakfast_1|F_01_073"
+      ],
+      "status": 200,
+      "contentType": "image/png"
+    },
+    {
+      "url": "https://aslcdi.website/images/handshape_images/open_8.png",
+      "kind": "image",
+      "entries": [
+        "taste|J_01_081"
+      ],
+      "status": 200,
+      "contentType": "image/png"
+    },
+    {
+      "url": "https://aslcdi.website/images/handshape_images/open_b.png",
+      "kind": "image",
+      "entries": [
+        "thank_you|H_02_053",
+        "good|B_01_052",
+        "better|F_01_062",
+        "my|C_01_060",
+        "will|F_03_025",
+        "please|B_02_007",
+        "bed|A_03_037",
+        "morning|C_02_012",
+        "table|A_03_025",
+        "best|F_02_062",
+        "his|F_02_058"
+      ],
+      "status": 200,
+      "contentType": "image/png"
+    },
+    {
+      "url": "https://aslcdi.website/images/handshape_images/p.png",
+      "kind": "image",
+      "entries": [
+        "let_me_see|E_01_092",
+        "we_will_see|F_03_027",
+        "see|C_02_030"
+      ],
+      "status": 200,
+      "contentType": "image/png"
+    },
+    {
+      "url": "https://aslcdi.website/images/handshape_images/r.png",
+      "kind": "image",
+      "entries": [
+        "restaurant|D_02_045"
+      ],
+      "status": 200,
+      "contentType": "image/png"
+    },
+    {
+      "url": "https://aslcdi.website/images/handshape_images/s.png",
+      "kind": "image",
+      "entries": [
+        "yes|G_03_074",
+        "hold_2|K_02_124",
+        "milk|A_01_051",
+        "saturday|D_01_028",
+        "kiss_fist|J_03_038",
+        "eleven|E_01_052"
+      ],
+      "status": 200,
+      "contentType": "image/png"
+    },
+    {
+      "url": "https://aslcdi.website/images/handshape_images/stacked_5.png",
+      "kind": "image",
+      "entries": [
+        "money_2|K_01_104",
+        "think_ponder|K_01_120"
+      ],
+      "status": 200,
+      "contentType": "image/png"
+    },
+    {
+      "url": "https://aslcdi.website/images/handshape_images/t.png",
+      "kind": "image",
+      "entries": [
+        "bathroom|A_02_051"
+      ],
+      "status": 200,
+      "contentType": "image/png"
+    },
+    {
+      "url": "https://aslcdi.website/images/handshape_images/w.png",
+      "kind": "image",
+      "entries": [
+        "water|A_02_031"
+      ],
+      "status": 200,
+      "contentType": "image/png"
+    },
+    {
+      "url": "https://aslcdi.website/images/handshape_images/y.png",
+      "kind": "image",
+      "entries": [
+        "oh_I_see|E_01_038",
+        "why|D_01_067",
+        "wrong_1|B_01_055",
+        "same_1|B_02_009"
+      ],
+      "status": 200,
+      "contentType": "image/png"
+    },
+    {
+      "url": "https://player.vimeo.com/video/341915865",
+      "kind": "video",
+      "entries": [
+        "pour_2|K_01_094"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/341916776",
+      "kind": "video",
+      "entries": [
+        "woman_2|K_01_101"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/341916909",
+      "kind": "video",
+      "entries": [
+        "light_2|K_01_102"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/341917184",
+      "kind": "video",
+      "entries": [
+        "money_2|K_01_104"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/341918714",
+      "kind": "video",
+      "entries": [
+        "listen|K_01_117"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/341919054",
+      "kind": "video",
+      "entries": [
+        "think_ponder|K_01_120"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/342142362",
+      "kind": "video",
+      "entries": [
+        "necklace_3|K_02_080"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/342142422",
+      "kind": "video",
+      "entries": [
+        "point_index|K_02_083"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/342144751",
+      "kind": "video",
+      "entries": [
+        "hold_2|K_02_124"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/342149824",
+      "kind": "video",
+      "entries": [
+        "toothbrush-ca|K_03_058"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/342257013",
+      "kind": "video",
+      "entries": [
+        "policeman_2|K_03_104"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/344218379",
+      "kind": "video",
+      "entries": [
+        "milk|A_01_051"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/344218518",
+      "kind": "video",
+      "entries": [
+        "dog|A_01_056"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/344221671",
+      "kind": "video",
+      "entries": [
+        "water|A_02_031"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/344221923",
+      "kind": "video",
+      "entries": [
+        "toilet|A_02_038"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/344223330",
+      "kind": "video",
+      "entries": [
+        "bathroom|A_02_051"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/344228207",
+      "kind": "video",
+      "entries": [
+        "bed|A_03_037"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/344359901",
+      "kind": "video",
+      "entries": [
+        "home|B_03_063"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/344361686",
+      "kind": "video",
+      "entries": [
+        "eat_2|B_03_082"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/344392377",
+      "kind": "video",
+      "entries": [
+        "bored|B_01_017"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/344393779",
+      "kind": "video",
+      "entries": [
+        "three|B_01_044"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/344398148",
+      "kind": "video",
+      "entries": [
+        "good|B_01_052"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/344398411",
+      "kind": "video",
+      "entries": [
+        "wrong_1|B_01_055"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/344400170",
+      "kind": "video",
+      "entries": [
+        "me|B_01_068"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/344408800",
+      "kind": "video",
+      "entries": [
+        "father|B_01_077"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/345536275",
+      "kind": "video",
+      "entries": [
+        "eat_1|B_02_002"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/345536433",
+      "kind": "video",
+      "entries": [
+        "black|B_02_006"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/345536463",
+      "kind": "video",
+      "entries": [
+        "please|B_02_007"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/345536499",
+      "kind": "video",
+      "entries": [
+        "mother|B_02_008"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/345536537",
+      "kind": "video",
+      "entries": [
+        "same_1|B_02_009"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/345536731",
+      "kind": "video",
+      "entries": [
+        "drink|B_02_012"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/345537035",
+      "kind": "video",
+      "entries": [
+        "friday|B_02_020"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/345537077",
+      "kind": "video",
+      "entries": [
+        "really|B_02_021"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/345537550",
+      "kind": "video",
+      "entries": [
+        "where|B_02_035"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/345556155",
+      "kind": "video",
+      "entries": [
+        "time|B_02_080"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/345556515",
+      "kind": "video",
+      "entries": [
+        "boy|B_02_090"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/345563195",
+      "kind": "video",
+      "entries": [
+        "dont_mind|B_03_033"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/345563279",
+      "kind": "video",
+      "entries": [
+        "sleep|B_03_037"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/345563444",
+      "kind": "video",
+      "entries": [
+        "parents|B_03_044"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/345576018",
+      "kind": "video",
+      "entries": [
+        "understand|C_01_006"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/345577686",
+      "kind": "video",
+      "entries": [
+        "first|C_01_033"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/345578041",
+      "kind": "video",
+      "entries": [
+        "who|C_01_041"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/345578134",
+      "kind": "video",
+      "entries": [
+        "fine_1|C_01_043"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/345578777",
+      "kind": "video",
+      "entries": [
+        "my|C_01_060"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/345587486",
+      "kind": "video",
+      "entries": [
+        "morning|C_02_012"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/345587526",
+      "kind": "video",
+      "entries": [
+        "tell|C_02_013"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/345587849",
+      "kind": "video",
+      "entries": [
+        "hearing|C_02_023"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/345588016",
+      "kind": "video",
+      "entries": [
+        "woman|C_02_028"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/345588085",
+      "kind": "video",
+      "entries": [
+        "see|C_02_030"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/345588888",
+      "kind": "video",
+      "entries": [
+        "what_for|C_02_054"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/345800071",
+      "kind": "video",
+      "entries": [
+        "think|C_03_053"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/345803814",
+      "kind": "video",
+      "entries": [
+        "yesterday|D_01_024"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/345803999",
+      "kind": "video",
+      "entries": [
+        "saturday|D_01_028"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/345805853",
+      "kind": "video",
+      "entries": [
+        "why|D_01_067"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/345969810",
+      "kind": "video",
+      "entries": [
+        "kiss|D_02_014"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/345972230",
+      "kind": "video",
+      "entries": [
+        "restaurant|D_02_045"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/345973004",
+      "kind": "video",
+      "entries": [
+        "hello|D_02_055"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/345973373",
+      "kind": "video",
+      "entries": [
+        "there|D_02_060"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/345973780",
+      "kind": "video",
+      "entries": [
+        "you|D_02_065"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/345973910",
+      "kind": "video",
+      "entries": [
+        "fine_2|D_02_067"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/346052269",
+      "kind": "video",
+      "entries": [
+        "oh_I_see|E_01_038"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/346052538",
+      "kind": "video",
+      "entries": [
+        "fed_up|E_01_047"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/346052632",
+      "kind": "video",
+      "entries": [
+        "eleven|E_01_052"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/346052832",
+      "kind": "video",
+      "entries": [
+        "bye|E_01_058"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/346053736",
+      "kind": "video",
+      "entries": [
+        "everyday|E_01_084"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/346053944",
+      "kind": "video",
+      "entries": [
+        "let_me_see|E_01_092"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/346487757",
+      "kind": "video",
+      "entries": [
+        "cool_1|F_01_014"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/346488481",
+      "kind": "video",
+      "entries": [
+        "dont_like|F_01_033"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/346488552",
+      "kind": "video",
+      "entries": [
+        "this/it|F_01_035"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/346489117",
+      "kind": "video",
+      "entries": [
+        "your|F_01_052"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/346489385",
+      "kind": "video",
+      "entries": [
+        "better|F_01_062"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/346489772",
+      "kind": "video",
+      "entries": [
+        "breakfast_1|F_01_073"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/346491546",
+      "kind": "video",
+      "entries": [
+        "I_love_you|F_01_102"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/346493816",
+      "kind": "video",
+      "entries": [
+        "must|F_02_004"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/346494879",
+      "kind": "video",
+      "entries": [
+        "tomorrow|F_02_040"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/346494952",
+      "kind": "video",
+      "entries": [
+        "he|F_02_044"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/346509508",
+      "kind": "video",
+      "entries": [
+        "his|F_02_058"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/346509837",
+      "kind": "video",
+      "entries": [
+        "best|F_02_062"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/346512139",
+      "kind": "video",
+      "entries": [
+        "hot|F_02_093"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/346599814",
+      "kind": "video",
+      "entries": [
+        "one|F_03_012"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/346600676",
+      "kind": "video",
+      "entries": [
+        "will|F_03_025"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/346600875",
+      "kind": "video",
+      "entries": [
+        "we_will_see|F_03_027"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/346601385",
+      "kind": "video",
+      "entries": [
+        "deaf_1|F_03_038"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/346602007",
+      "kind": "video",
+      "entries": [
+        "curious|F_03_051"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/346602424",
+      "kind": "video",
+      "entries": [
+        "like|F_03_063"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/346606708",
+      "kind": "video",
+      "entries": [
+        "soon_1|G_01_004"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/346606968",
+      "kind": "video",
+      "entries": [
+        "something|G_01_009"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/346610673",
+      "kind": "video",
+      "entries": [
+        "tired_of|G_01_043"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/346611550",
+      "kind": "video",
+      "entries": [
+        "long|G_01_059"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/346744377",
+      "kind": "video",
+      "entries": [
+        "our|G_02_067"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/346773040",
+      "kind": "video",
+      "entries": [
+        "should|G_02_079"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/346776022",
+      "kind": "video",
+      "entries": [
+        "if|G_03_017"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/346776094",
+      "kind": "video",
+      "entries": [
+        "we|G_03_019"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/346778768",
+      "kind": "video",
+      "entries": [
+        "yes|G_03_074"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/346804430",
+      "kind": "video",
+      "entries": [
+        "thank_you|H_02_053"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/346917606",
+      "kind": "video",
+      "entries": [
+        "afternoon|J_01_040"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/346922079",
+      "kind": "video",
+      "entries": [
+        "taste|J_01_081"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/346971794",
+      "kind": "video",
+      "entries": [
+        "kiss_fist|J_03_038"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/346973886",
+      "kind": "video",
+      "entries": [
+        "always|J_03_076"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://player.vimeo.com/video/464014529",
+      "kind": "video",
+      "entries": [
+        "table|A_03_025"
+      ],
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    }
+  ]
+}

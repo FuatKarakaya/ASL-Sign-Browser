@@ -1,0 +1,31 @@
+# Local downloader packages and FFmpeg (videos themselves are intentionally tracked).
+.tools/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+node_modules/
+
+# Local secrets and editor/OS files.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Interrupted media downloads and personal shortlist exports.
+*.part
+*.ytdl
+*.temp.*
+shortlist-export*.csv
+asl-sign-shortlist*.csv
+
+# Exploratory player responses contain expiring playback/session URLs.
+sources/water-config-reference.json
+sources/water-player-reference.html

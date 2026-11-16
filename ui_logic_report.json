@@ -1,0 +1,18 @@
+{
+  "checkedAtUTC": "2026-11-16T11:56:42.717Z",
+  "status": "PASS",
+  "checks": [
+    "search and alternate translations",
+    "exact handshape and motion filters",
+    "empty state selection",
+    "reset filter values",
+    "original ranks",
+    "shortlist save/restore logic",
+    "CSV escaping and exact variants",
+    "200 initial cards",
+    "no initial iframe",
+    "HTML escaping",
+    "storage failure warning"
+  ],
+  "limitation": "VM logic checks with minimal DOM/storage stubs. No real browser rendering, media playback, localStorage or download UI was tested."
+}

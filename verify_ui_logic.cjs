@@ -1,0 +1,66 @@
+// Node standard library only. These are logic checks, not a replacement for browser QA.
+const fs = require('node:fs');
+const vm = require('node:vm');
+const assert = require('node:assert/strict');
+const path = require('node:path');
+const dir = __dirname;
+const nodes = new Map();
+const getNode = id => {
+  if (!nodes.has(id)) nodes.set(id, {hidden:true, textContent:'', disabled:false});
+  return nodes.get(id);
+};
+const savedStorage = new Map();
+const context = vm.createContext({window:{addEventListener(){}}, document:{getElementById:getNode},
+  localStorage:{getItem:key=>savedStorage.get(key)??null,setItem:(key,value)=>savedStorage.set(key,value)},
+  setTimeout, clearTimeout, console});
+vm.runInContext(fs.readFileSync(path.join(dir,'data.js'),'utf8'),context);
+const source = fs.readFileSync(path.join(dir,'app.js'),'utf8');
+// Evaluate function definitions without invoking DOM startup in this non-browser test.
+vm.runInContext(source.slice(0,source.indexOf('const handshapes =')),context);
+const run = expression => vm.runInContext(expression,context);
+assert.equal(run('signs.length'),200);
+assert.equal(run("signs[100].entryId"),'hungry');
+assert.equal(run("signs[199].entryId"),'two');
+assert.equal(run("matchingSigns(signs,{query:'hungry'},new Set()).some(s=>s.rank===101)"),true);
+assert.equal(run("matchingSigns(signs,{query:'two'},new Set()).some(s=>s.rank===200)"),true);
+assert.equal(run("matchingSigns(signs,{query:'eat',handshape:'',motion:'',shortlistOnly:false},new Set()).length >= 2"),true);
+assert.equal(run("matchingSigns(signs,{query:'I love you'},new Set()).some(s=>s.entryId==='I_love_you')"),true);
+assert.equal(run("matchingSigns(signs,{query:'liquid'},new Set()).some(s=>s.entryId==='water')"),true,'Search alternate translations');
+assert.equal(run("matchingSigns(signs,{handshape:signs[0].handshape.id},new Set()).every(s=>s.handshape.id===signs[0].handshape.id)"),true);
+assert.equal(run("matchingSigns(signs,{motion:'Static candidate'},new Set()).length"),0);
+assert.equal(run("matchingSigns(signs,{motion:'Unclear'},new Set()).length"),3);
+assert.equal(run("matchingSigns(signs,{motion:'Dynamic'},new Set()).length"),197);
+assert.equal(run("matchingSigns(signs,{query:'no such sign xyz'},new Set()).length"),0);
+assert.equal(run("matchingSigns(signs,{query:'',handshape:'',motion:'',shortlistOnly:false},new Set()).length"),200);
+run("$('search').value='water'; $('handshape').value='flat_b'; $('motion').value='Unclear'; $('shortlist-only').checked=true; globalThis.renderCalls=0; render=()=>{globalThis.renderCalls++}; resetFilters();");
+assert.equal(getNode('search').value,'');
+assert.equal(getNode('handshape').value,'');
+assert.equal(getNode('motion').value,'');
+assert.equal(getNode('shortlist-only').checked,false);
+assert.equal(run('renderCalls'),1);
+assert.equal(run("matchingSigns(signs,{handshape:signs[0].handshape.id},new Set()).every((s,i,a)=>!i||a[i-1].rank<s.rank)"),true);
+run("shortlist = new Set([signs[1].id, signs[8].id]); localStorage.setItem(storageKey,JSON.stringify([...shortlist])); shortlist = new Set(); readShortlist();");
+assert.equal(run('shortlist.size'),2,'Saved values restore through the persistence code');
+assert.equal(run('matchingSigns(signs,{shortlistOnly:true},shortlist).map(s=>s.rank).join(",")'),'2,9');
+const csv = run('exportCSV(signs.filter(s=>shortlist.has(s.id)))');
+assert.equal(csv.split('\r\n').filter(Boolean).length,3);
+assert.ok(csv.includes('"I_love_you"') && csv.includes('"eat_2"'),'Export retains exact variant EntryIDs');
+assert.equal(run("exportCSV([{...signs[0],entryId:'quoted \"sign\"'}]).includes('quoted \"\"sign\"\"')"),true);
+assert.equal(run("signs.map(cardHTML).join('').match(/<article /g).length"),200);
+assert.equal(run("signs.map(cardHTML).join('').includes('<iframe')"),false,'No player in initial card markup');
+assert.equal(run("cardHTML(signs[0]).includes('<details')"),false);
+assert.equal(run("cardHTML(signs[0]).includes('EntryID:')"),false);
+assert.equal(run("cardHTML(signs[0]).includes('Image source')"),false);
+assert.equal(run("cardHTML({...signs[0],motion:'Static candidate'}).includes('card static')"),true);
+assert.equal(run("cardHTML(signs[0]).includes('card dynamic')"),true);
+assert.equal(run("cardHTML(signs[0]).includes('<h2><a href=')"),true);
+assert.equal(run("signs.every(s => s.localVideo?.startsWith('media/videos/'))"),true);
+assert.equal(run("escapeHTML('<script>\"&')"),'&lt;script&gt;&quot;&amp;');
+savedStorage.set('asl-sign-browser.shortlist.v1','invalid JSON');
+run('readShortlist()');
+assert.equal(getNode('storage-notice').hidden,false,'Invalid storage gives a useful visible warning');
+const report = {checkedAtUTC:new Date().toISOString(), status:'PASS',
+  checks:['search and alternate translations','exact handshape and motion filters','empty state selection','reset filter values','original ranks','shortlist save/restore logic','CSV escaping and exact variants','200 initial cards','no initial iframe','HTML escaping','storage failure warning'],
+  limitation:'VM logic checks with minimal DOM/storage stubs. No real browser rendering, media playback, localStorage or download UI was tested.'};
+fs.writeFileSync(path.join(dir,'ui_logic_report.json'),JSON.stringify(report,null,2)+'\n');
+console.log(JSON.stringify(report,null,2));

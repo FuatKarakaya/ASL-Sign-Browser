@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>ASL signs</title><link rel="stylesheet" href="styles.css"><script defer src="data.js"></script><script defer src="app.js"></script></head>
+<body><main><div class="toolbar">
+<strong id="result-count" role="status" aria-live="polite">200 signs</strong>
+<input id="search" type="search" aria-label="Search signs or translations" placeholder="Search signs..." autocomplete="off">
+<select id="handshape" aria-label="Handshape"><option value="">All handshapes</option></select>
+<select id="motion" aria-label="Motion status"><option value="">All motion</option><option>Dynamic</option><option>Static candidate</option><option>Unclear</option></select>
+<button id="reset" type="button">Reset</button>
+<label class="shortlist-filter"><input id="shortlist-only" type="checkbox"> Shortlist <span id="shortlist-count">0</span></label>
+<button id="export" type="button" disabled>Export shortlist</button></div>
+<p id="storage-notice" role="status" hidden></p><section id="cards" class="cards" aria-label="Signs in frequency order"></section>
+<div id="empty" hidden>No matching signs. <button id="empty-reset" type="button">Reset filters</button></div>
+<noscript>Enable JavaScript to browse the signs.</noscript>
+<footer><a href="https://asl-lex.org/download.html" target="_blank" rel="noopener">ASL-LEX</a> &middot; <a href="README.md">Sources &amp; notes</a></footer></main></body></html>

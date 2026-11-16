@@ -1,0 +1,13 @@
+{
+  "checkedAtUTC": "2026-11-16T11:56:44.274371+00:00",
+  "inputCount": 2723,
+  "verifiedLocalVideos": 200,
+  "eligibleCount": 954,
+  "websiteSignCount": 200,
+  "missingMediaMappings": [],
+  "sourceSHA256": "080ecc3de4b307a04dd9b2c2583c22bc623a5c731ab869d6e3905d4a3540fbd3",
+  "encoding": "latin-1",
+  "checks": "PASS: independent eligibility, full rows/columns, numeric order, exact variants/ranks, media and coding joins, ambiguous/missing and motion boundary cases",
+  "browserVerification": "Brave native UI verified desktop rendering, search, local playback, shortlist persistence after reload, simplified one-click autoplay/card replacement and close. Export opened the save dialog; completed download was not verified. Mobile layout not tested.",
+  "existingParentCSVMatchesOfficialDownload": true
+}
